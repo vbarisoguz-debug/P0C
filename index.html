@@ -3,59 +3,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KOSBAŞ PDKS</title>
+<link rel="icon" href="https://dev.kosbas.geobilgi.net/assets/management/media/logos/favicon.ico">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;min-height:100vh;display:flex;justify-content:center;align-items:center;background:url('https://dev.kosbas.geobilgi.net/assets/management/media/auth/login-bg.png') center/cover no-repeat;position:relative}
-body::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.15)}
-.login-card{position:relative;z-index:1;background:#fff;border-radius:16px;padding:48px 40px;width:420px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center}
-.logo-area{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px}
-.logo-area svg{width:48px;height:48px}
+.login-card{position:relative;z-index:1;background:#fff;border-radius:20px;padding:50px 44px;width:440px;box-shadow:0 10px 40px rgba(0,0,0,.15);text-align:center}
+.logo-area{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px}
+.logo-area img{width:56px;height:56px}
 .logo-text{text-align:left}
-.logo-text .brand{font-size:30px;font-weight:900;color:#1a2a4a;letter-spacing:2px;font-family:'Segoe UI',Arial,sans-serif}
-.logo-text .sub{font-size:13px;color:#3a6a8a;letter-spacing:1px;margin-top:0;font-weight:500}
-h2{font-size:22px;font-weight:700;color:#1a2b4a;margin-bottom:6px}
-.subtitle{font-size:14px;color:#8899aa;margin-bottom:32px}
-.input-group{margin-bottom:16px;text-align:left}
-.input-group label{font-size:12px;color:#5a7a9a;margin-bottom:6px;display:block;font-weight:500}
-.input-group input{width:100%;padding:14px 16px;border:1.5px solid #dde3ea;border-radius:10px;font-size:15px;color:#1a2b4a;outline:none;transition:border .2s}
-.input-group input:focus{border-color:#4a9fe5}
+.logo-text .brand{font-size:32px;font-weight:900;color:#1a2a4a;letter-spacing:1.5px}
+.logo-text .sub{font-size:14px;color:#3a7ab5;letter-spacing:0.5px;margin-top:1px;font-weight:600}
+h2{font-size:24px;font-weight:700;color:#1a2a4a;margin-bottom:8px}
+.subtitle{font-size:14px;color:#9aa8b5;margin-bottom:28px}
+.error-msg{color:#c0392b;font-size:13px;margin-bottom:16px;padding:12px 16px;background:#fef2f2;border:1px solid #fecaca;border-radius:10px}
+.input-group{margin-bottom:18px;text-align:left}
+.input-group label{font-size:13px;color:#4a5a6a;margin-bottom:7px;display:block;font-weight:600}
+.input-group input{width:100%;padding:13px 16px;border:1.5px solid #dde3ea;border-radius:10px;font-size:15px;color:#1a2b4a;outline:none;transition:border .2s;background:#fff}
+.input-group input:focus{border-color:#4a9fe5;box-shadow:0 0 0 3px rgba(74,159,229,.1)}
 .input-group input::placeholder{color:#b0bec5}
 .forgot{text-align:right;margin-bottom:24px}
-.forgot a{font-size:13px;color:#4a9fe5;text-decoration:none;font-weight:500}
-.forgot a:hover{text-decoration:underline}
-.login-btn{width:100%;padding:14px;background:linear-gradient(135deg,#4a9fe5,#3b8dd4);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 15px rgba(74,159,229,.4)}
-.login-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(74,159,229,.5)}
-.login-btn:active{transform:translateY(0)}
-.footer-logos{position:fixed;bottom:24px;right:24px;display:flex;gap:16px;align-items:center;z-index:1}
-.footer-logos img{height:50px;opacity:.85}
-.error-msg{display:none;color:#e74c3c;font-size:13px;margin-bottom:12px;padding:10px;background:#fdf0f0;border-radius:8px}
+.forgot a{font-size:13px;color:#4a9fe5;text-decoration:none;font-weight:600}
+.login-btn{width:100%;padding:15px;background:linear-gradient(135deg,#5aafe5,#3b8dd4);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:0.5px}
+.login-btn:hover{background:linear-gradient(135deg,#4a9fd5,#2b7dc4);box-shadow:0 4px 15px rgba(74,159,229,.4)}
+.footer-logos{position:fixed;bottom:30px;display:flex;gap:40px;align-items:center;z-index:1;left:50%;transform:translateX(-50%)}
+.footer-logos img{height:55px;opacity:.9}
 </style>
 </head>
 <body>
 <div class="login-card">
 <div class="logo-area">
-<img src="https://dev.kosbas.geobilgi.net/assets/management/media/logos/favicon.ico" style="width:52px;height:52px">
-<div class="logo-text">
-<div class="brand">KOSBAŞ</div>
-<div class="sub">Kocaeli Serbest Bölgesi</div>
-</div>
+<img src="https://dev.kosbas.geobilgi.net/assets/management/media/logos/logo.png" style="height:60px;width:auto">
 </div>
 <h2>Giriş Yap</h2>
 <p class="subtitle">Hesabınıza erişim sağlayın</p>
 <div class="error-msg" id="err">Oturum süreniz dolmuştur. Lütfen tekrar giriş yapın.</div>
 <div class="input-group">
 <label>E-Posta</label>
-<input type="email" id="e" placeholder="E-Posta adresinizi girin">
+<input type="email" id="e" placeholder="E-Posta">
 </div>
 <div class="input-group">
 <label>Şifre</label>
-<input type="password" id="p" placeholder="Şifrenizi girin">
+<input type="password" id="p" placeholder="Şifre">
 </div>
 <div class="forgot"><a href="#">Şifremi Unuttum?</a></div>
 <button class="login-btn" id="btn">Giriş Yap</button>
 </div>
+<div class="footer-logos">
+<img src="https://dev.kosbas.geobilgi.net/assets/management/media/logos/logo-ticaret.png">
+<img src="https://dev.kosbas.geobilgi.net/assets/management/media/logos/serbset_bol_genel_md.png">
+</div>
 <script>
-window.onload=function(){document.getElementById('err').style.display='block'};
 document.getElementById('btn').addEventListener('click',function(){
 var email=document.getElementById('e').value;
 var pass=document.getElementById('p').value;
